@@ -9,92 +9,42 @@ history, and difficulty producing operational reports. Management wants
 the system to not be complex but rather a simple system for patient,
 practitioner and appointment management.
 
-# 2. Stakeholders {#stakeholders .unnumbered}
+# 2. Stakeholders
 
-+-----------------------+-----------------------+-----------------------+
-| Stakeholder           | Need                  | Evidence              |
-+=======================+=======================+=======================+
-| patient               | Their appointment     | Case study has lack   |
-|                       | booked in reliably    | of reliable           |
-|                       | and accurately        | appointment history   |
-|                       |                       | as a current problem  |
-+-----------------------+-----------------------+-----------------------+
-| Reception staff       | Book, find, and       | Case study has        |
-|                       | cancel appointments   | duplicate appointment |
-|                       | quickly without       | bookings and manual   |
-|                       | creating duplicates   | cancellation          |
-|                       |                       | processes as current  |
-|                       |                       | problems              |
-+-----------------------+-----------------------+-----------------------+
-| practitioners         | Accurate, up to date  | Case study has lack   |
-|                       | schedule and patient  | of reliable           |
-|                       | history               | appointment history,  |
-|                       |                       | difficulty locating   |
-|                       |                       | patient records, and  |
-|                       |                       | inconsistent          |
-|                       |                       | appointment status    |
-|                       |                       | information as        |
-|                       |                       | current problems      |
-+-----------------------+-----------------------+-----------------------+
-| System maintainer     | Small, maintainable,  | Case study has        |
-|                       | organized system      | "management wants a   |
-|                       |                       | simple software       |
-|                       |                       | system that can       |
-|                       |                       | initially support     |
-|                       |                       | patient,              |
-|                       |                       |                       |
-|                       |                       | practitioner and      |
-|                       |                       | appointment           |
-|                       |                       | management"           |
-+-----------------------+-----------------------+-----------------------+
-| owner                 | Low running cost,     | Tutorial handout      |
-|                       | reduced errors,       | identifies these as   |
-|                       | increased efficiency  | the owner\'s needs.   |
-+-----------------------+-----------------------+-----------------------+
+| Stakeholder | Need | Evidence |
+|---|---|---|
+| patient | Their appointment booked in reliably and accurately | Case study has lack of reliable appointment history as a current problem |
+| Reception staff | Book, find, and cancel appointments quickly without creating duplicates | Case study has duplicate appointment bookings and manual cancellation processes as current problems |
+| practitioners | Accurate, up to date schedule and patient history | Case study has lack of reliable appointment history, difficulty locating patient records, and inconsistent appointment status information as current problems |
+| System maintainer | Small, maintainable, organized system | Case study has "management wants a simple software system that can initially support patient, practitioner and appointment management" |
+| owner | Low running cost, reduced errors, increased efficiency | Tutorial handout identifies these as the owner's needs. |
 
-### In Scope {#in-scope .unnumbered}
+### In Scope
 
 -   Patient management and patient records
-
 -   Practitioner management
-
 -   Creating and booking appointments
-
 -   Searching for patients by name or ID
-
 -   Viewing practitioner schedules and availability
-
 -   Cancelling appointments
-
 -   Preventing duplicate/double bookings
-
 -   Retaining cancelled appointments in appointment history
-
 -   Viewing appointment history
-
 -   Simple, maintainable system design
 
-### Out of Scope {#out-of-scope .unnumbered}
+### Out of Scope
 
 -   Online payments
-
 -   AI treatment recommendations
-
 -   Facial recognition login
-
 -   Complex AI features
+-   Other features not directly related to patient, practitioner and appointment management
 
--   Other features not directly related to patient, practitioner and
-    appointment management
+### Provisional / Uncertain
 
-### Provisional / Uncertain {#provisional-uncertain .unnumbered}
+-   **SMS appointment reminders** (provisional). This is a plausible feature, but the case study does not explicitly state that the clinic requires SMS reminders, so this would need to be validated with the stakeholders.
 
--   **SMS appointment reminders** (provisional). This is a plausible
-    feature, but the case study does not explicitly state that the
-    clinic requires SMS reminders, so this would need to be validated
-    with the stakeholders.
-
-# 3. Functional Requirements {#functional-requirements .unnumbered}
+# 3. Functional Requirements
 
 FR-01: The system should allow reception staff to create new
 appointments for patients selected with a practitioner and a timeslot,
@@ -126,9 +76,9 @@ FR-11: The system shall provide reliable appointment history.
 
 FR-12: The system shall support the production of operational reports.
 
-# 4. Non-Functional Requirements {#non-functional-requirements .unnumbered}
+# 4. Non-Functional Requirements
 
-NFR-01: The system shall prevent a practitioner\'s time slot from being
+NFR-01: The system shall prevent a practitioner's time slot from being
 double-booked, to preserve appointment data integrity.
 
 NFR-02: The system should remain responsive when handling the
@@ -145,7 +95,7 @@ ongoing maintenance.
 NFR-06: The system should reliably store and display appointment
 information without inconsistent appointment statuses.
 
-# 5. User Stories {#user-stories .unnumbered}
+# 5. User Stories
 
 US-01: As a receptionist, I want to search for a patient by name or ID,
 so that I can quickly locate their record without checking multiple
@@ -168,7 +118,7 @@ US-06: As a system maintainer, I want the system to be simple and
 maintainable, so that it can support patient, practitioner and
 appointment management without unnecessary complexity.
 
-# 6. Acceptance Criteria {#acceptance-criteria .unnumbered}
+# 6. Acceptance Criteria
 
 GIVEN a patient, practitioner, and timeslot are selected\
 WHEN reception staff create an appointment\
@@ -181,99 +131,38 @@ THEN the appointment is marked as cancelled and remains in the
 appointment history.
 
 GIVEN a receptionist needs to locate a patient\
-WHEN they search using the patient\'s name or ID\
+WHEN they search using the patient's name or ID\
 THEN the system displays the matching patient record.
 
-7. Assumptions and Open Questions
+# 7. Assumptions and Open Questions
 
 Assumptions:
 
-Reception staff are responsible for creating, finding and cancelling appointments.
-Practitioners need access to their schedules and relevant patient history.
-The first version should remain small and focused on patient, practitioner and appointment management.
-Cancelled appointments should remain available as historical records.
+-   Reception staff are responsible for creating, finding and cancelling appointments.
+-   Practitioners need access to their schedules and relevant patient history.
+-   The first version should remain small and focused on patient, practitioner and appointment management.
+-   Cancelled appointments should remain available as historical records.
 
 Open Questions:
 
-What specific response time should be required for patient searches?
-What specific security and access controls are required for patient data?
-Should patients be able to book appointments themselves, or should booking remain staff-managed?
+-   What specific response time should be required for patient searches?
+-   What specific security and access controls are required for patient data?
+-   Should patients be able to book appointments themselves, or should booking remain staff-managed?
 
-# 8. AI Requirements Review Record {#ai-requirements-review-record .unnumbered}
+# 8. AI Requirements Review Record
 
-  ---------------------------------------------------------------------------
-  AI suggestion   Evidence?      Decision       Reason         Verification
-  --------------- -------------- -------------- -------------- --------------
-  Add SMS         No             Rejected       Plausible      Confirm with
-  appointment                                   feature but    the client
-  reminders for                                 not mentioned  whether SMS
-  patients                                      in the brief.  reminders are
-                                                               required
-                                                               before
-                                                               including
-                                                               them.
-
-  Facial          No             Unsupported    There is no    Do not include
-  recognition                                   evidence for   unless a
-  login                                         facial         stakeholder
-                                                recognition in provides
-                                                the brief, and evidence and a
-                                                it conflicts   clear need.
-                                                with the goal  
-                                                of a small,    
-                                                maintainable   
-                                                system.        
-
-  Receptionists   Yes            Confirmed      The brief      Keep as a
-  create                                        identifies     functional
-  appointments                                  reception      requirement.
-                                                staff as       
-                                                needing to     
-                                                book           
-                                                appointments   
-                                                and the        
-                                                current        
-                                                process has    
-                                                booking        
-                                                problems.      
-
-  Online payment  No             Out of scope   Online payment Exclude unless
-                                                is not         the project
-                                                mentioned and  scope is
-                                                is beyond the  formally
-                                                stated         expanded.
-                                                patient,       
-                                                practitioner   
-                                                and            
-                                                appointment    
-                                                management     
-                                                scope.         
-
-  Practitioners   Yes            Confirmed      The            Keep as a
-  view schedules                                stakeholder    functional
-                                                analysis       requirement.
-                                                identifies an  
-                                                accurate,      
-                                                up-to-date     
-                                                practitioner   
-                                                schedule as a  
-                                                need.          
-
-  AI recommends   No             Out of scope   This is a      Exclude from
-  treatments                                    different type SmartCare.
-                                                of system and  
-                                                is not part of 
-                                                the stated     
-                                                clinic         
-                                                management     
-                                                problem.       
-
-                                                               
-  ---------------------------------------------------------------------------
+| AI suggestion | Evidence? | Decision | Reason | Verification |
+|---|---|---|---|---|
+| Add SMS appointment reminders for patients | No | Rejected | Plausible feature but not mentioned in the brief. | Confirm with the client whether SMS reminders are required before including them. |
+| Facial recognition login | No | Unsupported | There is no evidence for facial recognition in the brief, and it conflicts with the goal of a small, maintainable system. | Do not include unless a stakeholder provides evidence and a clear need. |
+| Receptionists create appointments | Yes | Confirmed | The brief identifies reception staff as needing to book appointments and the current process has booking problems. | Keep as a functional requirement. |
+| Online payment | No | Out of scope | Online payment is not mentioned and is beyond the stated patient, practitioner and appointment management scope. | Exclude unless the project scope is formally expanded. |
+| Practitioners view schedules | Yes | Confirmed | The stakeholder analysis identifies an accurate, up-to-date practitioner schedule as a need. | Keep as a functional requirement. |
+| AI recommends treatments | No | Out of scope | This is a different type of system and is not part of the stated clinic management problem. | Exclude from SmartCare. |
 
 Reflection:\
 AI showed that my requirements were still a bit too vague to test. For
-example, words such as \"fast\" and \"easy to use\" sound reasonable but
+example, words such as "fast" and "easy to use" sound reasonable but
 there would be no way to measure how the requirement would be met. AI
 also highlighted that the exact staff role responsible for creating
 appointments and the exact reports required by management still need
