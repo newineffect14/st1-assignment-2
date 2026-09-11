@@ -63,7 +63,7 @@ The system should be easy to use.
 Problem: there is no way to track how "easy to use" the system
 is. Clarification question: what
 specific usability must be met (e.g. new receptionist can do X bookings
-with no training under X minutes)
+with no training under X minutes
 
 Patient search should be fast.
 
