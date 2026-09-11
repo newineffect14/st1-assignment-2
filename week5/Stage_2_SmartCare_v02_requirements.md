@@ -184,7 +184,20 @@ GIVEN a receptionist needs to locate a patient\
 WHEN they search using the patient\'s name or ID\
 THEN the system displays the matching patient record.
 
-# 7. Assumptions and Open Questions Assumptions: • Reception staff are responsible for creating, finding and cancelling appointments. • Practitioners need access to their schedules and relevant patient history. • The first version should remain small and focused on patient, practitioner and appointment management. • Cancelled appointments should remain available as historical records.  Open Questions: • What specific response time should be required for patient searches? • What specific security and access controls are required for patient data? • Should patients be able to book appointments themselves, or should booking remain staff-managed? {#assumptions-and-open-questions-assumptions-reception-staff-are-responsible-for-creating-finding-and-cancelling-appointments.-practitioners-need-access-to-their-schedules-and-relevant-patient-history.-the-first-version-should-remain-small-and-focused-on-patient-practitioner-and-appointment-management.-cancelled-appointments-should-remain-available-as-historical-records.-open-questions-what-specific-response-time-should-be-required-for-patient-searches-what-specific-security-and-access-controls-are-required-for-patient-data-should-patients-be-able-to-book-appointments-themselves-or-should-booking-remain-staff-managed .unnumbered}
+7. Assumptions and Open Questions
+
+Assumptions:
+
+Reception staff are responsible for creating, finding and cancelling appointments.
+Practitioners need access to their schedules and relevant patient history.
+The first version should remain small and focused on patient, practitioner and appointment management.
+Cancelled appointments should remain available as historical records.
+
+Open Questions:
+
+What specific response time should be required for patient searches?
+What specific security and access controls are required for patient data?
+Should patients be able to book appointments themselves, or should booking remain staff-managed?
 
 # 8. AI Requirements Review Record {#ai-requirements-review-record .unnumbered}
 
