@@ -116,9 +116,7 @@
 # UML Class Diagram
 
 Insert/draw UML here. Include defensible relationships and
-multiplicities.![A screenshot of a computer AI-generated content may be
-incorrect.](media/image1.png){width="5.833333333333333in"
-height="6.138888888888889in"}
+multiplicities.! ![UML Class Diagram](images/week6pict.png)
 
 # Design Rationale
 
