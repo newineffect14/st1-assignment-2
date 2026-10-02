@@ -47,13 +47,13 @@ If AI can produce a 100-line Python application quickly, what knowledge does a s
 | Suggestion | Client evidence? | In scope? | Decision |
 |---|---|---|---|
 | Appointment management | Yes, client mentions appointments | Yes | **Accept** |
-| Facial recognition login | No | No – complex, privacy risk | **Reject** |
-| AI diagnosis recommendations | No | No – clinical/legal risk, not a booking task | **Reject** |
+| Facial recognition login | No | No as it could be a privacy risk | **Reject** |
+| AI diagnosis recommendations | No | No as this could be a clinical/legal risk, and also it is not a booking task | **Reject** |
 | Patient search | Implied as managing patients | Yes | **Accept (provisional)** |
 | Online payment | No | Not yet | **Defer: ask client** |
 | Practitioner schedule view | Implied as managing practitioners | Yes | **Accept (provisional)** |
 | Insurance processing | No | No | **Reject** |
-| Treatment-plan generation | No | No – clinical decision, high risk | **Reject** |
+| Treatment-plan generation | No | No as this should be a decision made by practitioners, not AI | **Reject** |
 
 ## Exit question
 
